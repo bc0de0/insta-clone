@@ -9,24 +9,6 @@ import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
 public class SecurityConfig {
-	
-    @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        http
-            .csrf(csrf -> csrf
-                .ignoringRequestMatchers("/auth/register", "/auth/login"))  
-            .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/auth/register", "/auth/login").permitAll() 
-            )
-            .httpBasic(httpBasic -> {})  
-            .formLogin(formLogin -> formLogin
-                .loginPage("/login")  
-                .permitAll()          
-            );  
-
-        return http.build();
-    }
-	
 	@Bean
 	public PasswordEncoder passwordEncoder() {
 		return new BCryptPasswordEncoder();

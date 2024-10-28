@@ -11,7 +11,6 @@ import com.careerinsta.insta_clone.entity.User;
 import com.careerinsta.insta_clone.service.NewUserService;
 
 @RestController
-@RequestMapping("/Auth")
 public class AuthController {
 	
 	private final NewUserService userService;
