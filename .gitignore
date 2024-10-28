@@ -31,3 +31,8 @@ build/
 
 ### VS Code ###
 .vscode/
+
+*.class     # Java class files
+*.jar       # Java archive files
+*.war       # Web archive files
+*.ear       # Enterprise archive files
